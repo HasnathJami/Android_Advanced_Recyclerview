@@ -8,7 +8,7 @@
     tools:context=".multiple_view_types.MultipleViewTypesActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvParent"
+        android:id="@+id/rvPaginationParent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
