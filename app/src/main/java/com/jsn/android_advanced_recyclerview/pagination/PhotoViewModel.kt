@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.jsn.android_advanced_recyclerview.model.Photo
 import com.jsn.android_advanced_recyclerview.repository.PhotoRepository
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
 class PhotoViewModel(private val repository: PhotoRepository) : ViewModel() {
@@ -33,4 +36,12 @@ class PhotoViewModel(private val repository: PhotoRepository) : ViewModel() {
             }
         }
     }
+
+
+    //Using page 3
+    fun getPhotos(clientId: String): Flow<PagingData<Photo>> {
+        return repository.getPhotosPagingData(clientId).cachedIn(viewModelScope)
+    }
+
+
 }

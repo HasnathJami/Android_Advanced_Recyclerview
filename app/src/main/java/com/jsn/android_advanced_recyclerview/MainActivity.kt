@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.jsn.android_advanced_recyclerview.multiple_view_types.MultipleViewTypesActivity
 import com.jsn.android_advanced_recyclerview.pagination.PaginationActivity
+import com.jsn.android_advanced_recyclerview.pagination.page3.Pagination3Activity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, MultipleViewTypesActivity::class.java))
         }
         findViewById<Button>(R.id.secondButton).setOnClickListener {
-            startActivity(Intent(this@MainActivity, MultipleViewTypesActivity::class.java))
+            startActivity(Intent(this@MainActivity, Pagination3Activity::class.java))
         }
         findViewById<Button>(R.id.thirdButton).setOnClickListener {
             startActivity(Intent(this@MainActivity, PaginationActivity::class.java))
